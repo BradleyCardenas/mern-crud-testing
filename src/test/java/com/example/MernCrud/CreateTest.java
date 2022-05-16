@@ -50,7 +50,6 @@ public class CreateTest {
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[1]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::div[2]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
-    //Warning: assertTextPresent may require manual changes
     pause(2000);
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Successfully added![\\s\\S]*$"));
   }
@@ -67,7 +66,6 @@ public class CreateTest {
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[2]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::span[1]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
-    //Warning: assertTextPresent may require manual changes
     pause(2000);
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Successfully updated![\\s\\S]*$"));
   }
@@ -81,7 +79,6 @@ public class CreateTest {
   public void testDDelete() throws Exception {
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Prueba'])[2]/following::button[1]")).click();
-    //Warning: assertTextNotPresent may require manual changes
     pause(1000);
     assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Prueba[\\s\\S]*$"));
   }
