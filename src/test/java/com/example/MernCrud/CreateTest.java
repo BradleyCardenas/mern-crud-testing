@@ -59,7 +59,7 @@ public class CreateTest {
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button")).click();
     driver.findElement(By.name("email")).click();
     driver.findElement(By.name("email")).clear();
-    driver.findElement(By.name("email")).sendKeys("prueba2@correo.com");
+    driver.findElement(By.name("email")).sendKeys("prueba3@correo.com");
     driver.findElement(By.name("age")).click();
     driver.findElement(By.name("age")).clear();
     driver.findElement(By.name("age")).sendKeys("30");
