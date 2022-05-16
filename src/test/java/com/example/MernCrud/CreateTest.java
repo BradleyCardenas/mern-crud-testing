@@ -72,6 +72,7 @@ public class CreateTest {
   
   @Test
   public void testCFind() throws Exception {
+	  pause(1000);
 	  assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Prueba[\\s\\S]*$"));
   }
   
